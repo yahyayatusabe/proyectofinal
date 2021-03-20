@@ -39,8 +39,8 @@ public class ClienteEntity implements Serializable {
     private String CPClie;
     private String TelefonoClie;
     private String EmailClie;
-    private String FechaNAcimientoClie;
-    private Date UsuarioClie;
+    private Date FechaNacimientoClie;
+    private String UsuarioClie;
     
     @JsonIgnore
     private String PasswdClie;
@@ -117,19 +117,19 @@ public class ClienteEntity implements Serializable {
         this.EmailClie = EmailClie;
     }
 
-    public String getFechaNAcimientoClie() {
-        return FechaNAcimientoClie;
+    public Date getFechaNacimientoClie() {
+        return FechaNacimientoClie;
     }
 
-    public void setFechaNAcimientoClie(String FechaNAcimientoClie) {
-        this.FechaNAcimientoClie = FechaNAcimientoClie;
+    public void setFechaNacimientoClie(Date FechaNacimientoClie) {
+        this.FechaNacimientoClie = FechaNacimientoClie;
     }
 
-    public Date getUsuarioClie() {
+    public String getUsuarioClie() {
         return UsuarioClie;
     }
 
-    public void setUsuarioClie(Date UsuarioClie) {
+    public void setUsuarioClie(String UsuarioClie) {
         this.UsuarioClie = UsuarioClie;
     }
 
@@ -151,8 +151,10 @@ public class ClienteEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "ClienteEntity{" + "id=" + id + ", NombreCompletoClie=" + NombreCompletoClie + ", DireccionClie=" + DireccionClie + ", CiudadCLie=" + CiudadCLie + ", CPClie=" + CPClie + ", TelefonoClie=" + TelefonoClie + ", EmailClie=" + EmailClie + ", FechaNAcimientoClie=" + FechaNAcimientoClie + ", UsuarioClie=" + UsuarioClie + ", PasswdClie=" + PasswdClie + ", NumTarClie=" + NumTarClie + '}';
+        return "ClienteEntity{" + "id=" + id + ", NombreCompletoClie=" + NombreCompletoClie + ", DireccionClie=" + DireccionClie + ", CiudadCLie=" + CiudadCLie + ", CPClie=" + CPClie + ", TelefonoClie=" + TelefonoClie + ", EmailClie=" + EmailClie + ", FechaNacimientoClie=" + FechaNacimientoClie + ", UsuarioClie=" + UsuarioClie + ", PasswdClie=" + PasswdClie + ", NumTarClie=" + NumTarClie + '}';
     }
+
+    
 
 
 }

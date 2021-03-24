@@ -1,5 +1,5 @@
 package net.ausiasmarch.gamingstore.proyectofinal;
-
+/*
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -11,3 +11,4 @@ class ProyectofinalApplicationTests {
 	}
 
 }
+*/

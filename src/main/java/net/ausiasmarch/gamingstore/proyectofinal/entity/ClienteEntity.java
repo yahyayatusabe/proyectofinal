@@ -36,8 +36,8 @@ public class ClienteEntity implements Serializable {
     private String NombreCompletoClie;
     private String DireccionClie;
     private String CiudadCLie;
-    private String CPClie;
-    private String TelefonoClie;
+    private Integer CPClie;
+    private Integer TelefonoClie;
     private String EmailClie;
     private Date FechaNacimientoClie;
     private String UsuarioClie;
@@ -93,21 +93,23 @@ public class ClienteEntity implements Serializable {
         this.CiudadCLie = CiudadCLie;
     }
 
-    public String getCPClie() {
+    public Integer getCPClie() {
         return CPClie;
     }
 
-    public void setCPClie(String CPClie) {
+    public void setCPClie(Integer CPClie) {
         this.CPClie = CPClie;
     }
 
-    public String getTelefonoClie() {
+    public Integer getTelefonoClie() {
         return TelefonoClie;
     }
 
-    public void setTelefonoClie(String TelefonoClie) {
+    public void setTelefonoClie(Integer TelefonoClie) {
         this.TelefonoClie = TelefonoClie;
     }
+
+    
 
     public String getEmailClie() {
         return EmailClie;
@@ -153,6 +155,8 @@ public class ClienteEntity implements Serializable {
     public String toString() {
         return "ClienteEntity{" + "id=" + id + ", NombreCompletoClie=" + NombreCompletoClie + ", DireccionClie=" + DireccionClie + ", CiudadCLie=" + CiudadCLie + ", CPClie=" + CPClie + ", TelefonoClie=" + TelefonoClie + ", EmailClie=" + EmailClie + ", FechaNacimientoClie=" + FechaNacimientoClie + ", UsuarioClie=" + UsuarioClie + ", PasswdClie=" + PasswdClie + ", NumTarClie=" + NumTarClie + '}';
     }
+
+   
 
     
 

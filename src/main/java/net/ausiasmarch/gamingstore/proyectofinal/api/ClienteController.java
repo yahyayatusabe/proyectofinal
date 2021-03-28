@@ -34,33 +34,31 @@ public class ClienteController {
     HttpSession oHttpSession; */
 
     @Autowired
-    ClienteRepository oUsuarioRepository;
+    ClienteRepository oClienteRepository;
 
-    @Autowired
-    ClienteRepository oTipousuarioRepository;
 
    /* @Autowired
     FillService oFillService; */
 
     @GetMapping("/{id}")
     public ResponseEntity<?> get(@PathVariable(value = "id") Long id) {
-        if (oUsuarioRepository.existsById(id)) {
-                    return new ResponseEntity<ClienteEntity>(oUsuarioRepository.getOne(id), HttpStatus.OK);
+        if (oClienteRepository.existsById(id)) {
+                    return new ResponseEntity<ClienteEntity>(oClienteRepository.getOne(id), HttpStatus.OK);
                 } else {
-                    return new ResponseEntity<ClienteEntity>(oUsuarioRepository.getOne(id), HttpStatus.NOT_FOUND);
+                    return new ResponseEntity<ClienteEntity>(oClienteRepository.getOne(id), HttpStatus.NOT_FOUND);
                 }
        
         
     }
     
-   /*  @DeleteMapping("/{id}")
+     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable(value = "id") Long id) {
-    if (oUsuarioRepository.existsById(id)) {
+    if (oClienteRepository.existsById(id)) {
                     return new ResponseEntity<Long>(id, HttpStatus.NOT_MODIFIED);
                 } else {
                     return new ResponseEntity<Long>(0L, HttpStatus.OK);
                 }
-    }*/
+    }
 }
     
 

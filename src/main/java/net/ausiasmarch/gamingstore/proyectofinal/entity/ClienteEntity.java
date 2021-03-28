@@ -21,6 +21,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
 
 @Entity
 @Table(name = "cliente")
@@ -33,21 +34,29 @@ public class ClienteEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    private String NombreCompletoClie;
-    private String DireccionClie;
-    private String CiudadCLie;
-    private Integer CPClie;
-    private Integer TelefonoClie;
-    private String EmailClie;
-    private Date FechaNacimientoClie;
-    private String UsuarioClie;
+    private String nombreclie;
+    
+    private String direccionclie;
+   
+    private String ciudadclie;
+   
+    private Integer cpclie;
+      
+    private Integer telefonoclie;
+   
+    private String emailclie;
+    
+    @Temporal(javax.persistence.TemporalType.DATE)
+    private Date fechanacclie;
+    
+    private String usuarioclie;
     
     @JsonIgnore
-    private String PasswdClie;
+    private String passwordclie;
     
-    private Integer NumTarClie;
+    private Long numtarjclie;
 
-    
+   
     
     /*@ManyToOne(fetch=FetchType.EAGER, cascade={CascadeType.REFRESH})
     @JoinColumn(name="id_tipousuario")
@@ -69,96 +78,94 @@ public class ClienteEntity implements Serializable {
         this.id = id;
     }
 
-    public String getNombreCompletoClie() {
-        return NombreCompletoClie;
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+ public String getNombreclie() {
+        return nombreclie;
     }
 
-    public void setNombreCompletoClie(String NombreCompletoClie) {
-        this.NombreCompletoClie = NombreCompletoClie;
+    public void setNombreclie(String nombreclie) {
+        this.nombreclie = nombreclie;
     }
 
-    public String getDireccionClie() {
-        return DireccionClie;
+public String getDireccionclie() {
+        return direccionclie;
     }
 
-    public void setDireccionClie(String DireccionClie) {
-        this.DireccionClie = DireccionClie;
+    public void setDireccionclie(String direccionclie) {
+        this.direccionclie = direccionclie;
     }
 
-    public String getCiudadCLie() {
-        return CiudadCLie;
+    public String getCiudadclie() {
+        return ciudadclie;
     }
 
-    public void setCiudadCLie(String CiudadCLie) {
-        this.CiudadCLie = CiudadCLie;
+    public void setCiudadclie(String ciudadclie) {
+        this.ciudadclie = ciudadclie;
     }
 
-    public Integer getCPClie() {
-        return CPClie;
+    public Integer getCpclie() {
+        return cpclie;
     }
 
-    public void setCPClie(Integer CPClie) {
-        this.CPClie = CPClie;
+    public void setCpclie(Integer cpclie) {
+        this.cpclie = cpclie;
     }
 
-    public Integer getTelefonoClie() {
-        return TelefonoClie;
+    public Integer getTelefonoclie() {
+        return telefonoclie;
     }
 
-    public void setTelefonoClie(Integer TelefonoClie) {
-        this.TelefonoClie = TelefonoClie;
+    public void setTelefonoclie(Integer telefonoclie) {
+        this.telefonoclie = telefonoclie;
     }
 
-    
-
-    public String getEmailClie() {
-        return EmailClie;
+    public String getEmailclie() {
+        return emailclie;
     }
 
-    public void setEmailClie(String EmailClie) {
-        this.EmailClie = EmailClie;
+    public void setEmailclie(String emailclie) {
+        this.emailclie = emailclie;
     }
 
-    public Date getFechaNacimientoClie() {
-        return FechaNacimientoClie;
+    public Date getFechanacclie() {
+        return fechanacclie;
     }
 
-    public void setFechaNacimientoClie(Date FechaNacimientoClie) {
-        this.FechaNacimientoClie = FechaNacimientoClie;
+    public void setFechanacclie(Date fechanacclie) {
+        this.fechanacclie = fechanacclie;
     }
 
-    public String getUsuarioClie() {
-        return UsuarioClie;
+    public String getUsuarioclie() {
+        return usuarioclie;
     }
 
-    public void setUsuarioClie(String UsuarioClie) {
-        this.UsuarioClie = UsuarioClie;
+    public void setUsuarioclie(String usuarioclie) {
+        this.usuarioclie = usuarioclie;
     }
 
-    public String getPasswdClie() {
-        return PasswdClie;
+    public String getPasswordclie() {
+        return passwordclie;
     }
 
-    public void setPasswdClie(String PasswdClie) {
-        this.PasswdClie = PasswdClie;
+    public void setPasswordclie(String passwordclie) {
+        this.passwordclie = passwordclie;
     }
 
-    public Integer getNumTarClie() {
-        return NumTarClie;
+    public Long getNumtarjclie() {
+        return numtarjclie;
     }
 
-    public void setNumTarClie(Integer NumTarClie) {
-        this.NumTarClie = NumTarClie;
+    public void setNumtarjclie(Long numtarjclie) {
+        this.numtarjclie = numtarjclie;
     }
 
     @Override
     public String toString() {
-        return "ClienteEntity{" + "id=" + id + ", NombreCompletoClie=" + NombreCompletoClie + ", DireccionClie=" + DireccionClie + ", CiudadCLie=" + CiudadCLie + ", CPClie=" + CPClie + ", TelefonoClie=" + TelefonoClie + ", EmailClie=" + EmailClie + ", FechaNacimientoClie=" + FechaNacimientoClie + ", UsuarioClie=" + UsuarioClie + ", PasswdClie=" + PasswdClie + ", NumTarClie=" + NumTarClie + '}';
+        return "ClienteEntity{" + "id=" + id + ", nombreclie=" + nombreclie + ", direccionclie=" + direccionclie + ", ciudadclie=" + ciudadclie + ", cpclie=" + cpclie + ", telefonoclie=" + telefonoclie + ", emailclie=" + emailclie + ", fechanacclie=" + fechanacclie + ", usuarioclie=" + usuarioclie + ", passwordclie=" + passwordclie + ", numtarjclie=" + numtarjclie + '}';
     }
 
    
-
-    
-
-
+   
 }

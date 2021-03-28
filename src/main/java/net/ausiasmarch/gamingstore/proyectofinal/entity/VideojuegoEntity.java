@@ -4,25 +4,15 @@
  * and open the template in the editor.
  */
 package net.ausiasmarch.gamingstore.proyectofinal.entity;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
-import java.time.Year;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+/*
 @Entity
 @Table(name = "videojuego")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -34,11 +24,11 @@ public class VideojuegoEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    private String NameVJ;
-    private String DescrpcionVJ;
-    private String PlataformaVJ;
-    private Year FechaLanzamientoVJ;
-    private Double PrecioVJ;
+    private String namevj;
+    private String descripcionvj;
+    private String plataformavj;
+    private Integer yearlanzamientovj;
+    private Double preciovj;
 
     public Long getId() {
         return id;
@@ -48,50 +38,53 @@ public class VideojuegoEntity implements Serializable {
         this.id = id;
     }
 
-    public String getNameVJ() {
-        return NameVJ;
+    public String getNamevj() {
+        return namevj;
     }
 
-    public void setNameVJ(String NameVJ) {
-        this.NameVJ = NameVJ;
+    public void setNamevj(String namevj) {
+        this.namevj = namevj;
     }
 
-    public String getDescrpcionVJ() {
-        return DescrpcionVJ;
+    public String getDescripcionvj() {
+        return descripcionvj;
     }
 
-    public void setDescrpcionVJ(String DescrpcionVJ) {
-        this.DescrpcionVJ = DescrpcionVJ;
+    public void setDescripcionvj(String descripcionvj) {
+        this.descripcionvj = descripcionvj;
     }
 
-    public String getPlataformaVJ() {
-        return PlataformaVJ;
+    public String getPlataformavj() {
+        return plataformavj;
     }
 
-    public void setPlataformaVJ(String PlataformaVJ) {
-        this.PlataformaVJ = PlataformaVJ;
+    public void setPlataformavj(String plataformavj) {
+        this.plataformavj = plataformavj;
     }
 
-    public Year getFechaLanzamientoVJ() {
-        return FechaLanzamientoVJ;
+    public Integer getYearlanzamientovj() {
+        return yearlanzamientovj;
     }
 
-    public void setFechaLanzamientoVJ(Year FechaLanzamientoVJ) {
-        this.FechaLanzamientoVJ = FechaLanzamientoVJ;
+    public void setYearlanzamientovj(Integer yearlanzamientovj) {
+        this.yearlanzamientovj = yearlanzamientovj;
     }
 
-    public Double getPrecioVJ() {
-        return PrecioVJ;
+    public Double getPreciovj() {
+        return preciovj;
     }
 
-    public void setPrecioVJ(Double PrecioVJ) {
-        this.PrecioVJ = PrecioVJ;
+    public void setPreciovj(Double preciovj) {
+        this.preciovj = preciovj;
     }
 
     @Override
     public String toString() {
-        return "VideojuegoEntity{" + "id=" + id + ", NameVJ=" + NameVJ + ", DescrpcionVJ=" + DescrpcionVJ + ", PlataformaVJ=" + PlataformaVJ + ", FechaLanzamientoVJ=" + FechaLanzamientoVJ + ", PrecioVJ=" + PrecioVJ + '}';
+        return "VideojuegoEntity{" + "id=" + id + ", namevj=" + namevj + ", descripcionvj=" + descripcionvj + ", plataformavj=" + plataformavj + ", yearlanzamientovj=" + yearlanzamientovj + ", preciovj=" + preciovj + '}';
     }
+
+   
+
+   
     
-    
-}
+}*/

@@ -5,10 +5,20 @@
  */
 package net.ausiasmarch.gamingstore.proyectofinal.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author yahya
  */
-public class VideojuegoRepository {
-    
-}
+/*
+@Repository
+public interface VideojuegoRepository extends JpaRepository<VideojuegoEntity, Long> {
+
+   
+   
+    }*/
+
+
+        

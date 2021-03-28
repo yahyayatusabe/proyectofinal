@@ -24,7 +24,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+/*
 @Entity
 @Table(name = "venta")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -37,12 +37,12 @@ public class VentaEntity implements Serializable {
     @Column(name = "id")
     private Long id;
     
-    private Year FechaLanzamientoVJ;
-    private Double PrecioVenta;
+    private Double precioventa;
     
      @JsonFormat(pattern="dd/MM/yyyy HH:mm")
-    private LocalDateTime FechaVenta;
-    private String EstadoVenta;
+    private LocalDateTime fechaventa;
+    
+     private String estadoventa;
 
     public Long getId() {
         return id;
@@ -52,42 +52,37 @@ public class VentaEntity implements Serializable {
         this.id = id;
     }
 
-    public Year getFechaLanzamientoVJ() {
-        return FechaLanzamientoVJ;
+    public Double getPrecioventa() {
+        return precioventa;
     }
 
-    public void setFechaLanzamientoVJ(Year FechaLanzamientoVJ) {
-        this.FechaLanzamientoVJ = FechaLanzamientoVJ;
+    public void setPrecioventa(Double precioventa) {
+        this.precioventa = precioventa;
     }
 
-    public Double getPrecioVenta() {
-        return PrecioVenta;
+    public LocalDateTime getFechaventa() {
+        return fechaventa;
     }
 
-    public void setPrecioVenta(Double PrecioVenta) {
-        this.PrecioVenta = PrecioVenta;
+    public void setFechaventa(LocalDateTime fechaventa) {
+        this.fechaventa = fechaventa;
     }
 
-    public LocalDateTime getFechaVenta() {
-        return FechaVenta;
+    public String getEstadoventa() {
+        return estadoventa;
     }
 
-    public void setFechaVenta(LocalDateTime FechaVenta) {
-        this.FechaVenta = FechaVenta;
-    }
-
-    public String getEstadoVenta() {
-        return EstadoVenta;
-    }
-
-    public void setEstadoVenta(String EstadoVenta) {
-        this.EstadoVenta = EstadoVenta;
+    public void setEstadoventa(String estadoventa) {
+        this.estadoventa = estadoventa;
     }
 
     @Override
     public String toString() {
-        return "VentaEntity{" + "id=" + id + ", FechaLanzamientoVJ=" + FechaLanzamientoVJ + ", PrecioVenta=" + PrecioVenta + ", FechaVenta=" + FechaVenta + ", EstadoVenta=" + EstadoVenta + '}';
+        return "VentaEntity{" + "id=" + id + ", precioventa=" + precioventa + ", fechaventa=" + fechaventa + ", estadoventa=" + estadoventa + '}';
     }
+     
+     
+   
     
     
-}
+}*/

@@ -59,6 +59,27 @@ public class ClienteController {
                     return new ResponseEntity<Long>(0L, HttpStatus.OK);
                 }
     }
+    
+    @PostMapping("/")/*Insertar un cliente*/
+    public ResponseEntity<?> create(@RequestBody ClienteEntity oUsuarioEntityFromRequest) {
+        
+       return new ResponseEntity<ClienteEntity>(oClienteRepository.save(oUsuarioEntityFromRequest), HttpStatus.OK);
+        
+    }
+    
+    
+    @PutMapping("/{id}")/*Editar un cliente*/
+    public ResponseEntity<?> update(@PathVariable(value = "id") Long id, @RequestBody ClienteEntity oUsuarioEntityFromRequest) {
+    
+        if (oClienteRepository.existsById(id)) {
+                    ClienteEntity oUsuarioEntityFromDatabase = oClienteRepository.getOne(id);
+                    return new ResponseEntity<ClienteEntity>(oClienteRepository.save(oUsuarioEntityFromRequest), HttpStatus.OK);
+                } else {
+                    return new ResponseEntity<ClienteEntity>(oClienteRepository.getOne(id), HttpStatus.NOT_FOUND);
+                }
+    
+    }
+    
 }
     
 
